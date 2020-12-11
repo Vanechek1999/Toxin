@@ -1,0 +1,902 @@
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/quicksand-v21-latin-regular.eot");
+  src: local(""), url("../fonts/Quicksand-v21-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Quicksand-v21-latin-regular.woff2") format("woff2"), url("../fonts/Quicksand-v21-latin-regular.woff") format("woff"), url("../fonts/Quicksand-v21-latin-regular.ttf") format("truetype"), url("../fonts/Quicksand-v21-latin-regular.svg#Quicksand") format("svg");
+}
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/quicksand-v21-latin-700.eot");
+  src: local(""), url("../fonts/Quicksand-v21-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/Quicksand-v21-latin-700.woff2") format("woff2"), url("../fonts/Quicksand-v21-latin-700.woff") format("woff"), url("../fonts/Quicksand-v21-latin-700.ttf") format("truetype"), url("../fonts/Quicksand-v21-latin-700.svg#Quicksand") format("svg");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/montserrat-v15-cyrillic-regular.eot");
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../fonts/Montserrat-v15-cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-v15-cyrillic-regular.woff2") format("woff2"), url("../fonts/Montserrat-v15-cyrillic-regular.woff") format("woff"), url("../fonts/Montserrat-v15-cyrillic-regular.ttf") format("truetype"), url("../fonts/Montserrat-v15-cyrillic-regular.svg#Montserrat") format("svg");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/montserrat-v15-cyrillic-700.eot");
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../fonts/Montserrat-v15-cyrillic-700.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-v15-cyrillic-700.woff2") format("woff2"), url("../fonts/Montserrat-v15-cyrillic-700.woff") format("woff"), url("../fonts/Montserrat-v15-cyrillic-700.ttf") format("truetype"), url("../fonts/Montserrat-v15-cyrillic-700.svg#Montserrat") format("svg");
+}
+h1, h2, h3, h4, h5.h6 {
+  margin: 0;
+  font-family: "Quicksand";
+  font-weight: 700;
+  color: #1F2041;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+h2 {
+  font-size: 19px;
+  line-height: 24px;
+}
+
+h3 {
+  font-family: "Montserrat";
+  font-size: 12px;
+  line-height: 15px;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  font-family: "Montserrat";
+  color: rgba(31, 32, 65, 0.75);
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.content {
+  width: 100%;
+  max-width: 1440;
+  display: grid;
+  grid-template-columns: 27.6% 38.5% 33.9%;
+}
+.content button {
+  outline: none;
+}
+.content input {
+  outline: none;
+}
+.content select {
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1158px;
+  margin: 0 auto;
+}
+
+.firstGrid_form-text {
+  text-transform: uppercase;
+  line-height: 15px;
+}
+
+.email {
+  width: 303px;
+  padding: 13px 0 13px 15px;
+  border-radius: 4px;
+  color: rgba(31, 32, 65, 0.25);
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  margin-bottom: 20px;
+}
+.email:nth-child(4) {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.email:nth-child(4)::placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.dpowdown {
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.guests {
+  width: 320px;
+  height: 44px;
+  padding: 8px 0 8px 15px;
+  border-radius: 4px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url(img/expand_more.svg) no-repeat 95% center;
+}
+
+.MaskedDate {
+  text-transform: uppercase;
+  padding-top: 23px;
+}
+.MaskedDate input {
+  font-family: "Montserrat";
+  padding: 8px 0 8px 15px;
+  width: 303px;
+  height: 26px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 24px;
+}
+.MaskedDate input::placeholder {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.changeDate {
+  padding-top: 40px;
+}
+.changeDate .column:nth-child(2) {
+  margin-left: 20px;
+}
+.changeDate h3 {
+  text-transform: uppercase;
+}
+.changeDate input {
+  width: 133px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url(img/expand_more.svg) no-repeat 90% center;
+  cursor: pointer;
+  padding-left: 15px;
+}
+
+.rangeDate {
+  padding-top: 40px;
+}
+.rangeDate h3 {
+  text-transform: uppercase;
+}
+.rangeDate input {
+  width: 249px;
+  height: 26px;
+  padding: 8px 0 8px 15px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  background: url(img/expand_more.svg) no-repeat 95% center;
+}
+
+.changeEmail {
+  padding-top: 40px;
+}
+.changeEmail h3 {
+  text-transform: uppercase;
+}
+.changeEmail input {
+  width: 205px;
+  height: 26px;
+  padding: 8px 0 8px 15px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  border-right: none;
+}
+.changeEmail button {
+  width: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-left: none;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #fff;
+  background: url(img/arrow_forward.svg) no-repeat center;
+}
+
+.DropdownDefault input, .DropdownExpanded input {
+  width: 205px;
+  height: 26px;
+  padding: 8px 0 8px 15px;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-top-left-radius: 4px;
+  border-right: none;
+}
+.DropdownDefault .btn_Dropdown, .DropdownExpanded .btn_Dropdown {
+  width: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-left: none;
+  border-top-right-radius: 4px;
+  background-color: #fff;
+  background: url(img/expand_more.svg) no-repeat 50% center;
+}
+.DropdownDefault .DropdownDefault_title, .DropdownExpanded .DropdownDefault_title {
+  margin-top: 100px;
+}
+.DropdownDefault .DropdownExpanded_title, .DropdownDefault .DropdownDefault_title, .DropdownExpanded .DropdownExpanded_title, .DropdownExpanded .DropdownDefault_title {
+  text-transform: uppercase;
+  line-height: 15px;
+}
+.DropdownDefault .DropdownExpanded_title p, .DropdownDefault .DropdownDefault_title p, .DropdownExpanded .DropdownExpanded_title p, .DropdownExpanded .DropdownDefault_title p {
+  margin-right: 55px;
+}
+
+.DropdownExpanded {
+  margin-top: 20px;
+}
+.DropdownExpanded .expanded {
+  display: none;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-top: none;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  width: -webkit-max-content;
+  width: max-content;
+}
+.DropdownExpanded .expanded .expanded_list-title {
+  padding: 13px 0 0 15px;
+  text-transform: uppercase;
+}
+.DropdownExpanded .expanded .expanded_list-title h3 {
+  padding-bottom: 22px;
+}
+.DropdownExpanded .expanded .expanded_list-title h3:last-child {
+  padding-bottom: 17px;
+}
+.DropdownExpanded .expanded .value_list {
+  padding: 7px 7px 7px 19px;
+}
+.DropdownExpanded .expanded .value {
+  align-items: center;
+}
+.DropdownExpanded .expanded .value:nth-child(1) {
+  padding-bottom: 7px;
+}
+.DropdownExpanded .expanded .value:nth-child(2) {
+  padding-bottom: 8px;
+}
+.DropdownExpanded .expanded .value h3 {
+  margin: 0px 11.5px 0 11.5px;
+}
+.DropdownExpanded .expanded .value input {
+  border: none;
+  width: 16px;
+  padding: 0px 3.5px 0 11.5px;
+  font-family: "Montserrat";
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+}
+.DropdownExpanded .expanded button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.expandableCheckboxList, .expandableCheckboxListActive {
+  padding-top: 55px;
+}
+.expandableCheckboxList h3, .expandableCheckboxListActive h3 {
+  text-transform: uppercase;
+}
+.expandableCheckboxList button, .expandableCheckboxListActive button {
+  background: url(img/expand_more.svg) no-repeat center;
+  transform: none;
+  border: none;
+  width: 44px;
+  margin-left: 30px;
+}
+
+.custom_checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom_checkbox + label {
+  display: inline-flex;
+  -webkit-user-select: none;
+          user-select: none;
+}
+
+.custom_checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.custom_checkbox:checked + label::before {
+  border-color: #BC9CFF;
+  background-color: #fff;
+  background-image: url(img/checkBox.svg);
+}
+
+.expandableCheckboxListActive label {
+  padding-bottom: 10px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.expandableCheckboxListActive .checkboxlist {
+  display: none;
+  padding: 18px 0 0 0;
+}
+
+.block_mark {
+  padding: 100px 0 0 0;
+  width: 280px;
+}
+
+.mark {
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+}
+.mark .mark_text {
+  margin: 0 0 0 10px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.mark .mark_text .mark_text-title {
+  font-weight: 700;
+}
+
+.content-secondGrid_form {
+  padding: 0 0 0 126px;
+}
+.content-secondGrid_form h3 {
+  text-transform: uppercase;
+  padding: 0 0 16px 0;
+}
+
+.checkBox h3 {
+  padding: 0 0 17px 0;
+}
+.checkBox .list {
+  color: rgba(31, 32, 65, 0.5);
+}
+.checkBox .list label {
+  margin: 0 0 10px 0;
+  line-height: 18px;
+}
+
+.list_radio input {
+  position: absolute;
+  left: -9999px;
+}
+.list_radio input:checked + label, .list_radio input:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+}
+.list_radio input + label:last-child {
+  margin-left: 20px;
+}
+.list_radio input:not(:checked) + label::before, .list_radio input:checked + label::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+  border-radius: 100%;
+  margin: 0 0 0 -30px;
+}
+.list_radio input:checked + label::before {
+  border: 1px solid #BC9CFF;
+}
+.list_radio input:not(:checked) + label::after, .list_radio input:checked + label::after {
+  content: "";
+  position: absolute;
+  transition: all 0.2s ease;
+}
+.list_radio input[type=radio]:checked + label:after,
+.list_radio input[type=radio]:not(:checked) + label:after {
+  left: 3.2px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.list_radio input[type=radio]:not(:checked) + label:after {
+  opacity: 0;
+}
+.list_radio input[type=radio]:checked + label:after {
+  opacity: 1;
+}
+
+.toggle label {
+  margin: 0 0 14px 0;
+}
+.toggle p {
+  margin: -2px 0 0 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background-color: rgba(31, 32, 65, 0.25);
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #fff;
+  border-color: #BC9CFF;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+.slider.round {
+  border-radius: 10px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.likeButton h3 {
+  padding: 0 0 16px 0;
+}
+.likeButton button {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+  background: #fff;
+  margin: 0 0 0 10px;
+}
+.likeButton button:first-child {
+  margin: 0px;
+}
+.likeButton button:hover svg {
+  background: url(img/LikeButtonsActive.svg) no-repeat;
+  transition: 0.2s;
+}
+.likeButton button:hover p {
+  color: #BC9CFF;
+  transition: 0.2s;
+}
+.likeButton svg {
+  top: 3px;
+  left: auto;
+  width: 17px;
+  height: 17px;
+  position: relative;
+  flex: 0 0 15px;
+  background: url(img/LikeButtons.svg) no-repeat;
+}
+.likeButton p {
+  font-size: 10px;
+  line-height: 12px;
+  margin: auto 0px;
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.star_rating fieldset {
+  border: none;
+}
+.star_rating fieldset .rating {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: row-reverse;
+  position: relative;
+}
+.star_rating fieldset .rating input {
+  display: none;
+}
+.star_rating fieldset .rating label {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background-image: url("img/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.3s;
+}
+.star_rating .rating-0 {
+  filter: grayscale(100%);
+}
+.star_rating .rating > input:checked ~ label, .star_rating .rating > input:checked ~ label ~ label {
+  background-image: url("img/star_active.svg");
+}
+.star_rating .rating > input:not(:checked) ~ label:hover, .star_rating .rating > input:not(:checked) ~ label:hover ~ label {
+  background-image: url("img/star_active.svg");
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+.DropdownPeople, .DropdownPeopleValue {
+  margin-top: 20px;
+}
+.DropdownPeople input, .DropdownPeopleValue input {
+  width: 276px;
+  height: 26px;
+  padding: 8px 0 8px 15px;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-top-left-radius: 4px;
+  border-right: none;
+}
+.DropdownPeople .btn_DropdownPeople, .DropdownPeople .btn_DropdownPeopleValue, .DropdownPeopleValue .btn_DropdownPeople, .DropdownPeopleValue .btn_DropdownPeopleValue {
+  width: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-left: none;
+  border-top-right-radius: 4px;
+  background-color: #fff;
+  background: url(img/expand_more.svg) no-repeat 50% center;
+}
+.DropdownPeople .DropdownPeople_form, .DropdownPeople .DropdownPeopleValue_form, .DropdownPeopleValue .DropdownPeople_form, .DropdownPeopleValue .DropdownPeopleValue_form {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-top: none;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  width: 318px;
+  height: 159px;
+}
+.DropdownPeople .DropdownPeople_form .form_list-title, .DropdownPeople .DropdownPeopleValue_form .form_list-title, .DropdownPeopleValue .DropdownPeople_form .form_list-title, .DropdownPeopleValue .DropdownPeopleValue_form .form_list-title {
+  padding: 13px 0 0 15px;
+  text-transform: uppercase;
+}
+.DropdownPeople .DropdownPeople_form .form_list-title h3, .DropdownPeople .DropdownPeopleValue_form .form_list-title h3, .DropdownPeopleValue .DropdownPeople_form .form_list-title h3, .DropdownPeopleValue .DropdownPeopleValue_form .form_list-title h3 {
+  padding-bottom: 22px;
+}
+.DropdownPeople .DropdownPeople_form .form_list-title h3:last-child, .DropdownPeople .DropdownPeopleValue_form .form_list-title h3:last-child, .DropdownPeopleValue .DropdownPeople_form .form_list-title h3:last-child, .DropdownPeopleValue .DropdownPeopleValue_form .form_list-title h3:last-child {
+  padding-bottom: 17px;
+}
+.DropdownPeople .DropdownPeople_form .form_list, .DropdownPeople .DropdownPeopleValue_form .form_list, .DropdownPeopleValue .DropdownPeople_form .form_list, .DropdownPeopleValue .DropdownPeopleValue_form .form_list {
+  padding: 7px 7px 20px 123px;
+}
+.DropdownPeople .DropdownPeople_form .value, .DropdownPeople .DropdownPeopleValue_form .value, .DropdownPeopleValue .DropdownPeople_form .value, .DropdownPeopleValue .DropdownPeopleValue_form .value {
+  align-items: center;
+}
+.DropdownPeople .DropdownPeople_form .value:nth-child(1), .DropdownPeople .DropdownPeopleValue_form .value:nth-child(1), .DropdownPeopleValue .DropdownPeople_form .value:nth-child(1), .DropdownPeopleValue .DropdownPeopleValue_form .value:nth-child(1) {
+  padding-bottom: 7px;
+}
+.DropdownPeople .DropdownPeople_form .value:nth-child(2), .DropdownPeople .DropdownPeopleValue_form .value:nth-child(2), .DropdownPeopleValue .DropdownPeople_form .value:nth-child(2), .DropdownPeopleValue .DropdownPeopleValue_form .value:nth-child(2) {
+  padding-bottom: 8px;
+}
+.DropdownPeople .DropdownPeople_form .value h3, .DropdownPeople .DropdownPeopleValue_form .value h3, .DropdownPeopleValue .DropdownPeople_form .value h3, .DropdownPeopleValue .DropdownPeopleValue_form .value h3 {
+  margin: 0px 11.5px 0 11.5px;
+}
+.DropdownPeople .DropdownPeople_form .value input, .DropdownPeople .DropdownPeopleValue_form .value input, .DropdownPeopleValue .DropdownPeople_form .value input, .DropdownPeopleValue .DropdownPeopleValue_form .value input {
+  border: none;
+  width: 16px;
+  padding: 0px 3.5px 0 11.5px;
+  font-family: "Montserrat";
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+}
+.DropdownPeople .DropdownPeople_form button, .DropdownPeople .DropdownPeopleValue_form button, .DropdownPeopleValue .DropdownPeople_form button, .DropdownPeopleValue .DropdownPeopleValue_form button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 50%;
+  background-color: #fff;
+}
+.DropdownPeople .DropdownPeople_form .last, .DropdownPeople .DropdownPeopleValue_form .last, .DropdownPeopleValue .DropdownPeople_form .last, .DropdownPeopleValue .DropdownPeopleValue_form .last {
+  display: flex;
+  justify-content: flex-end;
+  color: #BC9CFF;
+  margin: 0 7px 0 0;
+}
+
+.richCheckboxButtons {
+  width: 266px;
+}
+.richCheckboxButtons .richCheckboxButtons_text {
+  padding: 0 0 0 10px;
+}
+.richCheckboxButtons h3 {
+  padding: 7px 0 0 0;
+}
+.richCheckboxButtons .richCheckboxButtons_subtitle {
+  line-height: 14px;
+  font-size: 12px;
+  color: rgba(31, 32, 65, 0.5);
+  padding: 5px 0 0 0;
+}
+.richCheckboxButtons input {
+  width: 20px;
+  height: 20px;
+}
+
+.content-thirdGrid_form {
+  padding: 0 0 0 72px;
+}
+.content-thirdGrid_form input[type=range] {
+  position: absolute;
+  z-index: 2;
+  height: 18px;
+  width: 100%;
+}
+.content-thirdGrid_form #input-left {
+  top: -20px;
+}
+.content-thirdGrid_form #input-right {
+  top: -30px;
+}
+.content-thirdGrid_form .rangeSlider_middle {
+  position: relative;
+}
+.content-thirdGrid_form .rangeSlider_middle .fakeRangeSlider {
+  position: relative;
+  z-index: 1;
+  height: 10px;
+}
+.content-thirdGrid_form .rangeSlider_middle .fakeRangeSlider .track {
+  position: absolute;
+  width: 266px;
+  height: 4px;
+  z-index: 1;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 3px;
+}
+.content-thirdGrid_form .rangeSlider_middle .fakeRangeSlider .range {
+  position: absolute;
+  width: 88px;
+  height: 6px;
+  z-index: 2;
+  left: 82px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+.content-thirdGrid_form .rangeSlider_middle .fakeRangeSlider .thumb {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  z-index: 3;
+  top: -4.5px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+.content-thirdGrid_form .rangeSlider_middle .fakeRangeSlider .left {
+  left: 93px;
+  transform: translate(-15px);
+}
+.content-thirdGrid_form .rangeSlider_middle .fakeRangeSlider .right {
+  right: 153px;
+  transform: translate(15px);
+}
+.content-thirdGrid_form .complexButton {
+  padding: 0 0 16px 0;
+}
+.content-thirdGrid_form .complexButton h3 {
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+}
+.content-thirdGrid_form .complexButton .border_fill, .content-thirdGrid_form .complexButton .border_fill-hover {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  width: 99px;
+  height: 44px;
+}
+.content-thirdGrid_form .complexButton .border_fill button, .content-thirdGrid_form .complexButton .border_fill-hover button {
+  margin: 2px;
+  width: 95px;
+  height: 40px;
+  border-radius: 22px;
+  border: none;
+  background-color: transparent;
+}
+.content-thirdGrid_form .complexButton .border_fill button h3, .content-thirdGrid_form .complexButton .border_fill-hover button h3 {
+  margin: 0;
+  color: #fff;
+  opacity: 1;
+}
+.content-thirdGrid_form .complexButton .border_fill-hover {
+  opacity: 0.5;
+  margin-left: 20px;
+}
+.content-thirdGrid_form .complexButton .border_Nofill, .content-thirdGrid_form .complexButton .border_Nofill-hover {
+  margin: 30px 0 0 0;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  width: 99px;
+  height: 44px;
+}
+.content-thirdGrid_form .complexButton .border_Nofill button, .content-thirdGrid_form .complexButton .border_Nofill-hover button {
+  margin: 2px;
+  width: 95px;
+  height: 40px;
+  border-radius: 22px;
+  border: none;
+  background-color: #fff;
+}
+.content-thirdGrid_form .complexButton .border_Nofill button h3, .content-thirdGrid_form .complexButton .border_Nofill-hover button h3 {
+  margin: 0;
+  color: #BC9CFF;
+}
+.content-thirdGrid_form .complexButton .border_Nofill-hover {
+  margin-left: 20px;
+  opacity: 0.5;
+}
+.content-thirdGrid_form .complexButton_lastText h3 {
+  color: rgba(31, 32, 65, 0.5);
+  margin: 31px 0 0 20px;
+}
+.content-thirdGrid_form .complexButton_lastText h3:first-child {
+  color: #BC9CFF;
+  margin: 31px 0 0 0;
+}
+
+.ButtonPay {
+  width: 320px;
+}
+.ButtonPay .pay {
+  width: 276px;
+  height: 44px;
+  text-align: center;
+  border-top-left-radius: 22px;
+  border-bottom-left-radius: 22px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border: none;
+  margin: 0px;
+}
+.ButtonPay .pay h3 {
+  text-transform: uppercase;
+  color: #fff;
+}
+.ButtonPay .arrow {
+  cursor: pointer;
+  border: none;
+  width: 44px;
+  border-top-right-radius: 22px;
+  border-bottom-right-radius: 22px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.ButtonPay .arrow img {
+  padding: 4px 0 0 0;
+}
+
+.Pagination h3 {
+  text-transform: uppercase;
+  padding: 40px 0 17px 0;
+}
+.Pagination p {
+  padding: 0 0 11px 0;
+}
+.Pagination button {
+  border: none;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+}
+.Pagination button:first-child {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+}
+.Pagination button:last-child {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 22px;
+}
+
+.DropdownPeopleValue {
+  padding: 230px 0 0 0;
+  text-transform: uppercase;
+}
+.DropdownPeopleValue .DropdownPeopleValue_lastText {
+  justify-content: space-between;
+}
+.DropdownPeopleValue .DropdownPeopleValue_lastText button {
+  border: none;
+  width: 72px;
+  height: 100%;
+  border-radius: 0;
+  padding: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.DropdownPeopleValue .DropdownPeopleValue_lastText button:first-child {
+  margin: 0 0 0 14px;
+}
+.DropdownPeopleValue .DropdownPeopleValue_lastText button:last-child {
+  width: 84px;
+  margin: 0 7px 0 0;
+}
+.DropdownPeopleValue .DropdownPeopleValue_lastText h3 {
+  color: #BC9CFF;
+}
+
+.BulletList h3 {
+  text-transform: uppercase;
+}
+.BulletList .BulletList_img {
+  padding-inline-start: 0px;
+  list-style: none;
+  counter-reset: my-awesome-counter;
+}
+.BulletList .BulletList_img li::before {
+  content: "";
+  background: rgba(31, 32, 65, 0.25);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+.BulletList .BulletList_text {
+  list-style: none;
+  padding-inline-start: 0px;
+}

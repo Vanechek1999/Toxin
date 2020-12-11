@@ -1,0 +1,55 @@
+include mixin.pug
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        link(rel="stylesheet", href="../Form Elements/style.css")
+        link(rel="stylesheet", href="../base.css")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js")
+        script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+        title Document
+    body
+        .container
+            .content
+                .content-firstGrid
+                    .content-firstGrid_form
+                        +content_form('Text Field', 'Default', 'Email')
+                        +content_form('Text Field','Hover /Focus', 'This is pretty awesome')
+                        .dpowdown
+                            +Dropdown
+                        +MaskedDate('masked text field')
+                        +changeDate('date Dropdown')
+                        +rangeDate('filter date dropdown')
+                        +changeEmail('subscription text field')
+                        +DropdownDefault('dropdown', 'Default')
+                        +DropdownExpanded('dropdown', 'expanded', 'спальни', 'кровати', 'ванные комнаты')
+                        +expandableCheckboxList('expandable checkbox list')
+                        +expandableCheckboxListActive('expandable checkbox list', 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка','Телевизор', 'Шампунь')
+                        .block_mark
+                            +mark('img/smile.svg', 'Комфорт', 'Шумопоглощающие стены')
+                            +mark('img/city.svg', 'Удобство','Окно в каждой из спален')
+                .content-secondGrid
+                    .content-secondGrid_form
+                        +checkBox('Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)')
+                        +radio('Radio Buttons', 'Мужчина', 'Женщина')
+                        h3 Toggle
+                        .column
+                            +toggle('Получать спецпредложения')
+                            +toggle('Получать спецпредложения')
+                        +likeButton('like button', '2', '12')
+                        +fieldset('rate button')
+                        +DropdownPeople('dropdown', 'взрослые', 'дети', 'младенцы', 'применить')
+                        +richCheckboxButtons('rich Checkbox Buttons', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.')
+                .content-thirdGrid
+                    .content-thirdGrid_form
+                        +RangeSlider('Range Slider', '5 000₽-', ' 10 000₽')
+                        +Button('buttons', 'CLICK ME', 'CLICK ME', 'CLICK ME')
+                        +ButtonPay()
+                        +Pagination()
+                        +DropdownPeopleValue('dropdown', 'взрослые', 'дети', 'младенцы', 'очистить', 'применить')
+                        +BulletList('bullet list', 'Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00')
+        script(src="../js/script.js")
+                        
+                            

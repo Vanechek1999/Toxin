@@ -1,0 +1,307 @@
+mixin content_form(h3, p, placeholder)
+    .firstGrid_form-text.flex.space-between
+        h3=h3
+        p=p
+    input(type="text", placeholder=placeholder).email
+mixin Dropdown()
+    select.guests
+        option Сколько гостей
+mixin MaskedDate(h3)
+    .MaskedDate
+        h3=h3
+        input(type="text" id="date" placeholder="ДД/ММ/ГГГГ").date
+mixin changeDate(h3)
+    .changeDate.flex
+        .column 
+            h3=h3
+            input(type="text" id="datepicker" placeholder="ДД.ММ.ГГГГ")
+        .column 
+            h3=h3
+            input(type="text" id="datepicker1" placeholder="19.08.2019")
+mixin rangeDate(h3)
+    .rangeDate 
+        h3=h3
+        input(type="text" id="d" placeholder="19 авг - 23 авг")
+mixin changeEmail(h3)
+    .changeEmail
+        h3=h3
+        .flex
+            input(type="text" placeholder="Email")
+            button
+mixin DropdownDefault(h3, p)
+     .DropdownDefault
+        .DropdownDefault_title.flex.space-between
+            h3=h3
+            p=p
+        .flex
+            input(type="text" placeholder="2 спальни, 2 кровати...")
+            button.btn_Dropdown
+mixin DropdownExpanded(h3, p, text_bedroom, text_bed, text_bathrooms)
+    .DropdownExpanded
+        .DropdownExpanded_title.flex.space-between
+            h3=h3
+            p=p
+        .flex
+            input(type="text" placeholder="2 спальни, 2 кровати...")
+            button.btn_Dropdown
+        .expanded
+            .flex
+                .expanded_list-title
+                    h3=text_bedroom
+                    h3=text_bed
+                    h3=text_bathrooms
+                .value_list
+                    .value.flex
+                        button(class="minus1") -
+                        input(type="text", class="value1", value="0")
+                        button(class="plus1") +
+                    .value.flex
+                        button(class="minus2") -
+                        input(type="text", class="value2", value="2")  
+                        button(class="plus2") +
+                    .value.flex
+                        button(class="minus3") -
+                        input(type="text", class="value3", value="2")  
+                        button(class="plus3") +
+mixin expandableCheckboxList(h3)
+    .expandableCheckboxList
+        .flex 
+            h3=h3
+            button
+mixin expandableCheckboxListActive(h3, p1, p2, p3, p4, p5, p6)
+    .expandableCheckboxListActive
+        .flex 
+            h3=h3
+            button(id="check" class="check_drop")
+        .checkboxlist.column
+            .flex
+                input(type="checkbox" class="custom_checkbox" id="first_CheckboxListActive")
+                label(for="first_CheckboxListActive")=p1
+            .flex
+                input(type="checkbox" class="custom_checkbox" checked id="second_CheckboxListActive")
+                label(for="second_CheckboxListActive")=p2
+            .flex
+                input(type="checkbox" class="custom_checkbox" checked id="third_CheckboxListActive")
+                label(for="third_CheckboxListActive")=p3
+            .flex
+                input(type="checkbox" class="custom_checkbox" checked id="fourth_CheckboxListActive")
+                label(for="fourth_CheckboxListActive")=p4
+            .flex
+                input(type="checkbox" class="custom_checkbox" id="fifth_CheckboxListActive")
+                label(for="fifth_CheckboxListActive")=p5
+            .flex
+                input(type="checkbox" class="custom_checkbox" id="sixth_CheckboxListActive")
+                label(for="sixth_CheckboxListActive")=p6
+mixin mark(src, title, subtitle)
+    .mark.flex
+        img(src=src, alt="")
+        .mark_text
+            .mark_text-title=title
+            .mark_text-subtitle=subtitle
+//Second Grid
+mixin checkBox(p1, p2, p3)
+    .checkBox
+        h3 Checkbox Buttons
+        .list
+            .flex
+                input(type="checkbox" class="custom_checkbox" id="first_check")
+                label(for="first_check")=p1
+            .flex
+                input(type="checkbox" class="custom_checkbox" id="second_check")
+                label(for="second_check")=p2
+            .flex
+                input(type="checkbox" class="custom_checkbox" id="third_check")
+                label(for="third_check")=p3
+mixin radio(h3, p1, p2)
+    .radio
+        h3=h3
+        .list_radio.flex 
+            input(type="radio" name="radio" class="custom_radio" id="first_radio")
+            label(for="first_radio")=p1
+            input(type="radio" name="radio" class="custom_radio" id="second_radio")
+            label(for="second_radio")=p2
+
+mixin toggle(p1)
+    .toggle.flex
+        label.switch
+            input(type="checkbox")
+            span(class="slider round" )
+        p=p1
+mixin likeButton(h3, p1, p2)
+    .likeButton
+        h3=h3
+        .flex
+            button.flex
+                svg
+                p=p1
+            button.flex
+                svg
+                p=p2
+mixin fieldset(h3)
+    .fieldset
+        h3=h3
+            .flex
+                .star_rating
+                    fieldset
+                        .flex
+                            .rating
+                                input(type="radio" id="star1" name="rating" value="5")
+                                label(for="star1")
+                                input(type="radio" id="star2" name="rating" value="5" checked)
+                                label(for="star2")
+                                input(type="radio" id="star3" name="rating" value="5")
+                                label(for="star3")
+                                input(type="radio" id="star4" name="rating" value="5")
+                                label(for="star4")
+                                input(type="radio" id="star5" name="rating" value="5")
+                                label(for="star5")
+                .star_rating
+                    fieldset
+                        .flex
+                            .rating
+                                input(type="radio" id="star6" name="rating1" value="5" checked)
+                                label(for="star6")
+                                input(type="radio" id="star7" name="rating1" value="5")
+                                label(for="star7")
+                                input(type="radio" id="star8" name="rating1" value="5")
+                                label(for="star8")
+                                input(type="radio" id="star9" name="rating1" value="5")
+                                label(for="star9")
+                                input(type="radio" id="star10" name="rating1" value="5")
+                                label(for="star10")
+mixin DropdownPeople(h3, p1, p2, p3, p4)
+    .DropdownPeople
+        h3=h3
+        .flex
+            input(type="text" placeholder="Сколько гостей")
+            button.btn_DropdownPeople
+        .DropdownPeople_form
+            .flex
+                .form_list-title
+                    h3=p1
+                    h3=p2
+                    h3=p3
+                .form_list
+                    .value.flex
+                        button(class="minus4") -
+                        input(type="text", class="value4", value="0")
+                        button(class="plus4") +
+                    .value.flex
+                        button(class="minus5") -
+                        input(type="text", class="value5", value="0")  
+                        button(class="plus5") +
+                    .value.flex
+                        button(class="minus6") -
+                        input(type="text", class="value6", value="0")  
+                        button(class="plus6") +
+            h3.last=p4
+mixin richCheckboxButtons(h3, p1, p2, p3, p4)
+        h3=h3
+        .richCheckboxButtons.flex
+            input(type="checkbox" )
+            .richCheckboxButtons_text.column
+                h3=p1
+                .richCheckboxButtons_subtitle=p2
+        .richCheckboxButtons.flex
+            input(type="checkbox")
+            .richCheckboxButtons_text.column
+                h3=p3
+                .richCheckboxButtons_subtitle=p4
+
+mixin RangeSlider(h3, p1, p2)
+    .rangeSlider
+        .flex
+            h3=h3
+            .rangeSlider_value.flex
+                p(id="Range_value-first")=p1
+                p(id="Range_value-second")=p2
+        .rangeSlider_middle
+            .rangeSlider_multi
+                input(type="range" id="input-left" step="500" min="0" max="15000" value="5000")
+                input(type="range" id="input-right" step="500" min="0" max="15000" value="10000")
+            .fakeRangeSlider
+                .track
+                .range
+                .thumb.left
+                .thumb.right
+
+mixin Button(h3, p1, p2, p3)
+    .complexButton
+        h3=h3
+        .flex
+            .border_fill
+                button
+                    h3=p1
+            .border_fill-hover
+                button
+                    h3=p1
+        .flex
+            .border_Nofill
+                button
+                    h3=p1
+            .border_Nofill-hover
+                button
+                    h3=p1
+        .complexButton_lastText.flex
+            h3=p1
+            h3=p1
+mixin ButtonPay()
+    .ButtonPay.flex
+        button.pay
+            h3 Перейти к оплате
+        button.arrow
+            img(src="img/arrow_BYU.svg", alt="")
+mixin Pagination()
+    .Pagination
+        h3 pagination
+        pagination.flex
+            button 1
+            button 2
+            button 3
+            button ...
+            button 15
+            button 
+                img(src="img/arrow_BYU.svg", alt="")
+        p 1 – 12 из 100+ вариантов аренды
+mixin DropdownPeopleValue(h3, p1, p2, p3, p4, p5)
+    .DropdownPeopleValue
+        h3=h3
+        .flex
+            input(type="text" readonly id="sumValue" value= 3 + " гостя")
+            button.btn_DropdownPeopleValue
+        .DropdownPeopleValue_form
+            .flex
+                .form_list-title
+                    h3=p1
+                    h3=p2
+                    h3=p3
+                .form_list
+                    .value.flex
+                        button(class="minus7") -
+                        input(type="text", readonly class="value7", value="2")
+                        button(class="plus7") +
+                    .value.flex
+                        button(class="minus8") -
+                        input(type="text", readonly class="value8", value="1")  
+                        button(class="plus8") +
+                    .value.flex
+                        button(class="minus9") -
+                        input(type="text", readonly class="value9", value="0")  
+                        button(class="plus9") +
+            .DropdownPeopleValue_lastText.flex
+                button(class="DropdownPeople_apply")
+                    h3=p4
+                button(id="DropdownPeople_clear")
+                    h3=p5
+mixin BulletList(p1, p2, p3, p4)
+    .BulletList
+        h3=p1
+        .flex
+            ul.BulletList_img
+                li
+                li
+                li
+            ul.BulletList_text
+                li=p2
+                li=p3
+                li=p4

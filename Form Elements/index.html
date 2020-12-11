@@ -1,0 +1,442 @@
+
+<!--Second Grid--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="../Form Elements/style.css"/>
+    <link rel="stylesheet" href="../base.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="content-firstGrid">
+          <div class="content-firstGrid_form">
+            <div class="firstGrid_form-text flex space-between">
+              <h3>Text Field</h3>
+              <p>Default</p>
+            </div>
+            <input class="email" type="text" placeholder="Email"/>
+            <div class="firstGrid_form-text flex space-between">
+              <h3>Text Field</h3>
+              <p>Hover /Focus</p>
+            </div>
+            <input class="email" type="text" placeholder="This is pretty awesome"/>
+            <div class="dpowdown">
+              <select class="guests">
+                <option>Сколько гостей</option>
+              </select>
+            </div>
+            <div class="MaskedDate">
+              <h3>masked text field</h3>
+              <input class="date" type="text" id="date" placeholder="ДД/ММ/ГГГГ"/>
+            </div>
+            <div class="changeDate flex">
+              <div class="column"> 
+                <h3>date Dropdown</h3>
+                <input type="text" id="datepicker" placeholder="ДД.ММ.ГГГГ"/>
+              </div>
+              <div class="column"> 
+                <h3>date Dropdown</h3>
+                <input type="text" id="datepicker1" placeholder="19.08.2019"/>
+              </div>
+            </div>
+            <div class="rangeDate"> 
+              <h3>filter date dropdown</h3>
+              <input type="text" id="d" placeholder="19 авг - 23 авг"/>
+            </div>
+            <div class="changeEmail">
+              <h3>subscription text field</h3>
+              <div class="flex">
+                <input type="text" placeholder="Email"/>
+                <button></button>
+              </div>
+            </div>
+            <div class="DropdownDefault">
+              <div class="DropdownDefault_title flex space-between">
+                <h3>dropdown</h3>
+                <p>Default</p>
+              </div>
+              <div class="flex">
+                <input type="text" placeholder="2 спальни, 2 кровати..."/>
+                <button class="btn_Dropdown"></button>
+              </div>
+            </div>
+            <div class="DropdownExpanded">
+              <div class="DropdownExpanded_title flex space-between">
+                <h3>dropdown</h3>
+                <p>expanded</p>
+              </div>
+              <div class="flex">
+                <input type="text" placeholder="2 спальни, 2 кровати..."/>
+                <button class="btn_Dropdown"></button>
+              </div>
+              <div class="expanded">
+                <div class="flex">
+                  <div class="expanded_list-title">
+                    <h3>спальни</h3>
+                    <h3>кровати</h3>
+                    <h3>ванные комнаты</h3>
+                  </div>
+                  <div class="value_list">
+                    <div class="value flex">
+                      <button class="minus1">-</button>
+                      <input class="value1" type="text" value="0"/>
+                      <button class="plus1">+</button>
+                    </div>
+                    <div class="value flex">
+                      <button class="minus2">-</button>
+                      <input class="value2" type="text" value="2"/>
+                      <button class="plus2">+</button>
+                    </div>
+                    <div class="value flex">
+                      <button class="minus3">-</button>
+                      <input class="value3" type="text" value="2"/>
+                      <button class="plus3">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="expandableCheckboxList">
+              <div class="flex"> 
+                <h3>expandable checkbox list</h3>
+                <button></button>
+              </div>
+            </div>
+            <div class="expandableCheckboxListActive">
+              <div class="flex"> 
+                <h3>expandable checkbox list</h3>
+                <button class="check_drop" id="check"></button>
+              </div>
+              <div class="checkboxlist column">
+                <div class="flex">
+                  <input class="custom_checkbox" type="checkbox" id="first_CheckboxListActive"/>
+                  <label for="first_CheckboxListActive">Завтрак</label>
+                </div>
+                <div class="flex">
+                  <input class="custom_checkbox" type="checkbox" checked="checked" id="second_CheckboxListActive"/>
+                  <label for="second_CheckboxListActive">Письменный стол</label>
+                </div>
+                <div class="flex">
+                  <input class="custom_checkbox" type="checkbox" checked="checked" id="third_CheckboxListActive"/>
+                  <label for="third_CheckboxListActive">Стул для кормления</label>
+                </div>
+                <div class="flex">
+                  <input class="custom_checkbox" type="checkbox" checked="checked" id="fourth_CheckboxListActive"/>
+                  <label for="fourth_CheckboxListActive">Кроватка</label>
+                </div>
+                <div class="flex">
+                  <input class="custom_checkbox" type="checkbox" id="fifth_CheckboxListActive"/>
+                  <label for="fifth_CheckboxListActive">Телевизор</label>
+                </div>
+                <div class="flex">
+                  <input class="custom_checkbox" type="checkbox" id="sixth_CheckboxListActive"/>
+                  <label for="sixth_CheckboxListActive">Шампунь</label>
+                </div>
+              </div>
+            </div>
+            <div class="block_mark">
+              <div class="mark flex"><img src="img/smile.svg" alt=""/>
+                <div class="mark_text">
+                  <div class="mark_text-title">Комфорт</div>
+                  <div class="mark_text-subtitle">Шумопоглощающие стены</div>
+                </div>
+              </div>
+              <div class="mark flex"><img src="img/city.svg" alt=""/>
+                <div class="mark_text">
+                  <div class="mark_text-title">Удобство</div>
+                  <div class="mark_text-subtitle">Окно в каждой из спален</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-secondGrid">
+          <div class="content-secondGrid_form">
+            <div class="checkBox">
+              <h3>Checkbox Buttons</h3>
+              <div class="list">
+                <div class="flex">
+                  <input class="custom_checkbox" type="checkbox" id="first_check"/>
+                  <label for="first_check">Можно курить</label>
+                </div>
+                <div class="flex">
+                  <input class="custom_checkbox" type="checkbox" id="second_check"/>
+                  <label for="second_check">Можно с питомцами</label>
+                </div>
+                <div class="flex">
+                  <input class="custom_checkbox" type="checkbox" id="third_check"/>
+                  <label for="third_check">Можно пригласить гостей (до 10 человек)</label>
+                </div>
+              </div>
+            </div>
+            <div class="radio">
+              <h3>Radio Buttons</h3>
+              <div class="list_radio flex"> 
+                <input class="custom_radio" type="radio" name="radio" id="first_radio"/>
+                <label for="first_radio">Мужчина</label>
+                <input class="custom_radio" type="radio" name="radio" id="second_radio"/>
+                <label for="second_radio">Женщина</label>
+              </div>
+            </div>
+            <h3>Toggle</h3>
+            <div class="column">
+              <div class="toggle flex">
+                <label class="switch">
+                  <input type="checkbox"/><span class="slider round"></span>
+                </label>
+                <p>Получать спецпредложения</p>
+              </div>
+              <div class="toggle flex">
+                <label class="switch">
+                  <input type="checkbox"/><span class="slider round"></span>
+                </label>
+                <p>Получать спецпредложения</p>
+              </div>
+            </div>
+            <div class="likeButton">
+              <h3>like button</h3>
+              <div class="flex">
+                <button class="flex">
+                  <svg></svg>
+                  <p>2</p>
+                </button>
+                <button class="flex">
+                  <svg></svg>
+                  <p>12</p>
+                </button>
+              </div>
+            </div>
+            <div class="fieldset">
+              <h3>rate button
+                <div class="flex">
+                  <div class="star_rating">
+                    <fieldset>
+                      <div class="flex">
+                        <div class="rating">
+                          <input type="radio" id="star1" name="rating" value="5"/>
+                          <label for="star1"></label>
+                          <input type="radio" id="star2" name="rating" value="5" checked="checked"/>
+                          <label for="star2"></label>
+                          <input type="radio" id="star3" name="rating" value="5"/>
+                          <label for="star3"></label>
+                          <input type="radio" id="star4" name="rating" value="5"/>
+                          <label for="star4"></label>
+                          <input type="radio" id="star5" name="rating" value="5"/>
+                          <label for="star5"></label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="star_rating">
+                    <fieldset>
+                      <div class="flex">
+                        <div class="rating">
+                          <input type="radio" id="star6" name="rating1" value="5" checked="checked"/>
+                          <label for="star6"></label>
+                          <input type="radio" id="star7" name="rating1" value="5"/>
+                          <label for="star7"></label>
+                          <input type="radio" id="star8" name="rating1" value="5"/>
+                          <label for="star8"></label>
+                          <input type="radio" id="star9" name="rating1" value="5"/>
+                          <label for="star9"></label>
+                          <input type="radio" id="star10" name="rating1" value="5"/>
+                          <label for="star10"></label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </h3>
+            </div>
+            <div class="DropdownPeople">
+              <h3>dropdown</h3>
+              <div class="flex">
+                <input type="text" placeholder="Сколько гостей"/>
+                <button class="btn_DropdownPeople"></button>
+              </div>
+              <div class="DropdownPeople_form">
+                <div class="flex">
+                  <div class="form_list-title">
+                    <h3>взрослые</h3>
+                    <h3>дети</h3>
+                    <h3>младенцы</h3>
+                  </div>
+                  <div class="form_list">
+                    <div class="value flex">
+                      <button class="minus4">-</button>
+                      <input class="value4" type="text" value="0"/>
+                      <button class="plus4">+</button>
+                    </div>
+                    <div class="value flex">
+                      <button class="minus5">-</button>
+                      <input class="value5" type="text" value="0"/>
+                      <button class="plus5">+</button>
+                    </div>
+                    <div class="value flex">
+                      <button class="minus6">-</button>
+                      <input class="value6" type="text" value="0"/>
+                      <button class="plus6">+</button>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="last">применить</h3>
+              </div>
+            </div>
+            <h3>rich Checkbox Buttons</h3>
+            <div class="richCheckboxButtons flex">
+              <input type="checkbox"/>
+              <div class="richCheckboxButtons_text column">
+                <h3>Широкий коридор</h3>
+                <div class="richCheckboxButtons_subtitle">Ширина коридоров в номере не менее 91 см.</div>
+              </div>
+            </div>
+            <div class="richCheckboxButtons flex">
+              <input type="checkbox"/>
+              <div class="richCheckboxButtons_text column">
+                <h3>Помощник для инвалидов</h3>
+                <div class="richCheckboxButtons_subtitle">На 1 этаже вас встретит специалист  и проводит до номера.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-thirdGrid">
+          <div class="content-thirdGrid_form">
+            <div class="rangeSlider">
+              <div class="flex">
+                <h3>Range Slider</h3>
+                <div class="rangeSlider_value flex">
+                  <p id="Range_value-first">5 000₽-</p>
+                  <p id="Range_value-second"> 10 000₽</p>
+                </div>
+              </div>
+              <div class="rangeSlider_middle">
+                <div class="rangeSlider_multi">
+                  <input type="range" id="input-left" step="500" min="0" max="15000" value="5000"/>
+                  <input type="range" id="input-right" step="500" min="0" max="15000" value="10000"/>
+                </div>
+                <div class="fakeRangeSlider">
+                  <div class="track"></div>
+                  <div class="range"></div>
+                  <div class="thumb left"></div>
+                  <div class="thumb right"></div>
+                </div>
+              </div>
+            </div>
+            <div class="complexButton">
+              <h3>buttons</h3>
+              <div class="flex">
+                <div class="border_fill">
+                  <button>
+                    <h3>CLICK ME</h3>
+                  </button>
+                </div>
+                <div class="border_fill-hover">
+                  <button>
+                    <h3>CLICK ME</h3>
+                  </button>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="border_Nofill">
+                  <button>
+                    <h3>CLICK ME</h3>
+                  </button>
+                </div>
+                <div class="border_Nofill-hover">
+                  <button>
+                    <h3>CLICK ME</h3>
+                  </button>
+                </div>
+              </div>
+              <div class="complexButton_lastText flex">
+                <h3>CLICK ME</h3>
+                <h3>CLICK ME</h3>
+              </div>
+            </div>
+            <div class="ButtonPay flex">
+              <button class="pay">
+                <h3>Перейти к оплате</h3>
+              </button>
+              <button class="arrow"><img src="img/arrow_BYU.svg" alt=""/></button>
+            </div>
+            <div class="Pagination">
+              <h3>pagination</h3>
+              <pagination class="flex">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>...</button>
+                <button>15</button>
+                <button> <img src="img/arrow_BYU.svg" alt=""/></button>
+              </pagination>
+              <p>1 – 12 из 100+ вариантов аренды</p>
+            </div>
+            <div class="DropdownPeopleValue">
+              <h3>dropdown</h3>
+              <div class="flex">
+                <input type="text" readonly="readonly" id="sumValue" value="3 гостя"/>
+                <button class="btn_DropdownPeopleValue"></button>
+              </div>
+              <div class="DropdownPeopleValue_form">
+                <div class="flex">
+                  <div class="form_list-title">
+                    <h3>взрослые</h3>
+                    <h3>дети</h3>
+                    <h3>младенцы</h3>
+                  </div>
+                  <div class="form_list">
+                    <div class="value flex">
+                      <button class="minus7">-</button>
+                      <input class="value7" type="text" readonly="readonly" value="2"/>
+                      <button class="plus7">+</button>
+                    </div>
+                    <div class="value flex">
+                      <button class="minus8">-</button>
+                      <input class="value8" type="text" readonly="readonly" value="1"/>
+                      <button class="plus8">+</button>
+                    </div>
+                    <div class="value flex">
+                      <button class="minus9">-</button>
+                      <input class="value9" type="text" readonly="readonly" value="0"/>
+                      <button class="plus9">+</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="DropdownPeopleValue_lastText flex">
+                  <button class="DropdownPeople_apply">
+                    <h3>очистить</h3>
+                  </button>
+                  <button id="DropdownPeople_clear">
+                    <h3>применить</h3>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="BulletList">
+              <h3>bullet list</h3>
+              <div class="flex">
+                <ul class="BulletList_img">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <ul class="BulletList_text">
+                  <li>Нельзя с питомцами</li>
+                  <li>Без вечеринок и мероприятий</li>
+                  <li>Время прибытия — после 13:00, а выезд до 12:00</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

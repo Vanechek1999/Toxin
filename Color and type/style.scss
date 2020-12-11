@@ -1,0 +1,115 @@
+@import "../base.scss";
+
+
+.flex{
+    display: flex;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.space-between{
+    justify-content: space-between;
+}
+
+.content{
+    svg{
+        margin: 30px 0 0 30px;
+    }
+}
+
+.container{
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.color{
+    margin-top: 67px;
+}
+
+.color_element{
+    margin-bottom: 20px;
+}
+
+.color_element-figure{
+    width: 70px;
+    height: 70px;
+    border-radius: 4px;
+} 
+
+.DarkShade100{
+    background: $DarkShade100;
+    margin-top: 0;
+}
+.DarkShade75{
+    background-color: $DarkShade75;
+}
+.DarkShade50{
+    background-color: $DarkShade50;
+}
+.DarkShade25{
+    background-color: $DarkShade25;
+}
+.DarkShade5{
+    background-color: $DarkShade5;
+}
+.Purple{
+    background-color: $Purple;
+}
+.Green{
+    background-color: $Green;
+}
+
+.color_element-text{
+    margin: 7px 0 0 40px;
+    font-family: 'Quicksand';
+    font-size: 19px;
+    line-height: 28.5px;
+        &:first-child{
+            margin-top: 0;
+        }
+        .color_element-title{
+            font-weight: 700;
+        }
+        .color_element-subtitle{
+            font-weight: 400;
+        }
+}
+
+.fonts{
+    margin: 67px 41px 0 0;
+}
+
+.font_title{
+    color: $Dark25;
+    text-align: right;
+        .h1{
+            font-size: 24px;
+            line-height: 29px; 
+            padding-bottom: 80px;
+        }
+        .h2{
+            font-size: 19px;
+            line-height: 23px;
+            padding-bottom: 74px;
+        }
+        .h3{
+            font-size: 12px;
+            line-height: 15px;
+            padding-bottom: 50px;
+        }
+        .body{
+            font-size: 14px;
+            line-height: 24px;
+        }
+}
+.font_subtitle{
+    margin-left: 30px;
+        h1,h2,h3,body{
+            padding-bottom: 50px;
+        }
+        h3{
+            text-transform: uppercase;
+        }
+}
